@@ -10,6 +10,6 @@ function mostrar()
 	nombre= txtIdNombre.value;  // declara variables por id asigna
 	edad=txtIdEdad.value;
 
-	alert("Su Nombre Es : " + nombre +" y Su Edad Es: "+  edad); //concatena
+	alert("Su Nombre Es : " +nombre+" y Su Edad Es: "+edad); //concatena
 }
 
