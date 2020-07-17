@@ -16,7 +16,7 @@ function Rectangulo ()
     largo=parseInt(largo);
     ancho=parseInt(ancho);
 
-    cantidadDeHilosDeAlambre=((2*(largo+ancho))*3);         // se saca el perimetro de un rectangulo y se multiplica por 3
+    cantidadDeHilosDeAlambre=(2*(largo+ancho)*3);         // se saca el perimetro de un rectangulo y se multiplica por 3
 
     alert("La cantidad de hilos que necesitas es: "+cantidadDeHilosDeAlambre); // mostrar por alert
 }
@@ -29,7 +29,7 @@ function Circulo ()
     var radio=txtIdRadio.value;
     radio=parseInt(radio);                                      // transforma a int numero
 
-    cantidadDeHilosDeAlambre=(Math.pow(3.14*radio,2))*3;         // circunferencia de un circulo * 3 
+    cantidadDeHilosDeAlambre=(2*Math.PI*radio)*3;         // circunferencia de un circulo * 3 
 
     alert("La cantidad de hilos que necesitas es: "+cantidadDeHilosDeAlambre );   // mostrar por alert
 }
@@ -50,7 +50,7 @@ function Materiales ()
     medida1=parseInt(medida1);          // transforma a int numero
     medida2=parseInt(medida2);
 
-    alert("La cantidad de bolsas de cemento que necesitas son:  "+(medida1*medida2)*bolsaCemento); // 
+    alert("La cantidad de bolsas de cemento que necesitas son:  "+(medida1*medida2)*bolsaCemento); // alt+92 para ponerlo en un alert
     alert("La cantidad de bolsas de cal que necesitas son:  "+ (medida1*medida2)*bolsaCal);
 
 

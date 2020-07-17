@@ -1,6 +1,15 @@
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	var edad;
 
-}//FIN DE LA FUNCIÓN
+	edad=txtIdEdad.value;   // toma valor de id 
+
+	if(edad==15)   // condicional igualacion
+	{
+		alert("Niña Bonita!!");  
+	}
+
+
+
+}

@@ -61,9 +61,9 @@ precioUno=parseInt(precioUno);                      // transforma a num int
 precioDos=parseInt(precioDos);
 precioTres=parseInt(precioTres);
 precioFinal=(precioUno+precioDos+precioTres);               // suma los 3 preios ingresados
-precioFinal=parseInt(precioFinal);
+//precioFinal=parseInt(precioFinal);
 precioAgregado=(precioFinal*21/100);   // precioAgregado=(precioFinal*0.21);  // saca el 21 % de lso numeros ingresados
-precioAgregado=parseInt(precioAgregado);              // transforma a int numero 
+//precioAgregado=parseInt(precioAgregado);              
    
 
 
