@@ -1,5 +1,6 @@
 function mostrar()
 {
+	/*
 	var edad;
 
 	edad=txtIdEdad.value;
@@ -11,5 +12,17 @@ function mostrar()
 	else{
 		alert("Sos menor wey!");
 	}
+	*/
+	var edad;
 
+	edad=txtIdEdad.value;
+
+	if(edad>17)
+	{
+		alert("Sos mayor de edad!");         // si el mayor a 17 sino mostrar lo otro 
+	}
+	if(edad<18)
+	{
+		alert("Sos menor de edad!");
+	}
 }

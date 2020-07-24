@@ -10,5 +10,120 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    var precioUnitarioDeLamparitas;
+    var cantidadDeLamparas;
+    var marcaDeLamparas;
+    var precioFinal;
+
+    var precioUnitarioDeLamparitas= 35;
+    var cantidadDeLamparas=txtIdCantidad.value;
+    //cantidadDeLamparas=parseInt(cantidadDeLamparas);
+    var marcaDeLamparas=Marca.value;
+    /*agregar var precioBruto;
+     precioBruto= precioUnitarioDeLamparitas*cantidadDeLamparas */
+    if(cantidadDeLamparas > 5)
+    {
+        precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.5);
+    }
+    else
+    {
+      if(cantidadDeLamparas==5 && marcaDeLamparas=="ArgentinaLuz")
+      {
+        precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.4);
+      }
+      else
+      {
+        if(cantidadDeLamparas==5 && marcaDeLamparas!="ArgentinaLuz")
+        {
+          precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.3);
+        }
+        else
+        {
+          if(cantidadDeLamparas==4 && (marcaDeLamparas=="ArgentinaLuz" || marcaDeLamparas=="FelipeLamparas"))
+          {
+            precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.25);
+          } 
+          else
+          {
+            if(cantidadDeLamparas==4 && marcaDeLamparas!="ArgentinaLuz" && marcaDeLamparas!="FelipeLamparas")
+            {
+              precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.2);    
+            }
+            else
+            {
+              if(cantidadDeLamparas==3 && marcaDeLamparas=="ArgentinaLuz")
+              {
+                precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.15);     
+              }
+              else
+              {
+                if(cantidadDeLamparas==3 && marcaDeLamparas=="FelipeLamparas")
+                {
+                  precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.10);    
+                }
+                else
+                {
+                  if(cantidadDeLamparas==3 && marcaDeLamparas!="FelipeLamparas")
+                  { 
+                  precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.05);
+                  }
+                }
+              }
+            }
+          }       
+        }
+      }      
+    }
+  if(precioFinal>120)
+  {
+    precioFinal=(precioFinal*10/100)+precioFinal;
+    alert("IIBB Usted pago:  "+precioFinal+" siendo 10% el impuesto que se pagó." );
+  }  
+    txtIdprecioDescuento.value=precioFinal;
 }
+
+// Para Realizar ------------------------------------------------------------------------------------------------------
+ if(cantidadDeLamparas==5)
+{
+  if(marcaDeLamparas=="ArgentinaLuz")
+  { 
+    precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.4);
+  }
+  else
+  {
+    precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.3);
+  }
+}
+else
+{
+  if(cantidadDeLamparas==4)
+  {
+    if(marcaDeLamparas=="ArgentinaLuz" || marcaDeLamparas=="FelipeLamparas")
+    {
+      precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.25);
+    }
+    else
+    {
+      precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.2);  
+    }
+  }
+  else
+  {
+    if(cantidadDeLamparas==3)
+    {
+      if(marcaDeLamparas=="ArgentinaLuz")
+      {
+        precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.15);
+      }
+      if(marcaDeLamparas=="FelipeLamparas")
+      {
+        precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.10); 
+      }
+      else
+      {
+        precioFinal=(precioUnitarioDeLamparitas*cantidadDeLamparas-(precioUnitarioDeLamparitas*cantidadDeLamparas)*0.05);
+      }
+    }
+    
+  }
+}   

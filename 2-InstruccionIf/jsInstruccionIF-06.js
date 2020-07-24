@@ -3,20 +3,24 @@ function mostrar()
 	var edad;
 
 	edad=txtIdEdad.value;
+	edad=parseInt(edad);
 
-	if(edad >=18)
+	if(edad >18)
 	{
 		alert("Es Mayor");
-
+			
 	}
-		else if(edad >= 13 && edad <= 17)
+		else
 		{
-	
-			alert("Sos adolescente wey!");
-		}
+			if(edad > 12 && edad <18)
+			{
+				alert("Sos adolescente wey!");					
+			}
 			else
 			{
-				alert("Es niño");
+				alert("Es Niño");
 			}
-
+		
+	
+		}
 }
