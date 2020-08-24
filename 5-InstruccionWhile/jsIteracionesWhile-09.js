@@ -9,13 +9,23 @@ function mostrar()
 	var numeroMinimo;
 	var respuesta;
 	//iniciar variables
-	banderaDelPrimero="es el primero";
-	respuesta='si';
-	while(respuesta=="si")
+	numeroIngresado=0;
+	//banderaDelPrimero="es el primero";
+	respuesta=="si";
+	while(respuesta!="si")
 	{
-		
-		respuesta=prompt("desea continuar?");
+		numeroIngresado=prompt("Ingrese un numero");
+		//numeroIngresado=parseInt(numeroIngresado);		
+		respuesta=prompt("Termino?");
+		if(numeroIngresado>numeroIngresado)
+		{
+			numeroIngresado==numeroMaximo;
+		}
+		else
+		{
+			numeroIngresado==numeroMinimo;
+		}
 	}
 	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	txtIdMinimo.value=numeroMinimo;
 }//FIN DE LA FUNCIÓN
